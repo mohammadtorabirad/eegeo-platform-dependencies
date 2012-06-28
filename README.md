@@ -1,2 +1,0 @@
-eegeo-platform-dependencies
-===========================

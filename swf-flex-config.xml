@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<flex-config>    
+   <compiler>
+      <!-- Turn on generation of accessible SWFs. -->
+      <accessible>true</accessible>
+
+      <!-- Specifies the locales for internationalization. -->
+      <locale>
+          <locale-element>en_US</locale-element>
+      </locale>
+      
+      <!-- List of SWC files or directories that contain SWC files. -->
+      <library-path>
+         <path-element>lib\flexsdk\frameworks\libs\flash-integration.swc</path-element>
+         <path-element>lib\flexsdk\frameworks\libs\authoringsupport.swc</path-element>
+		 
+		 <!-- ??   <path-element>locale/{locale}</path-element> -->
+         <!-- The following entry is because LCDS copies playerfds.swc in the player folder -->
+         <path-element>lib\flexsdk\frameworks\locale\{locale}</path-element>
+
+      </library-path>
+      <namespaces>
+      <!-- Specify a URI to associate with a manifest of components for use as MXML -->
+      <!-- elements.                                                                -->
+         <namespace>
+            <uri>http://ns.adobe.com/mxml/2009</uri>
+            <manifest>lib/flexsdk/frameworks/mxml-2009-manifest.xml</manifest>
+         </namespace>
+         <namespace>
+            <uri>library://ns.adobe.com/flex/spark</uri>
+            <manifest>lib/flexsdk/frameworks/spark-manifest.xml</manifest>
+         </namespace>
+         <namespace>
+            <uri>library://ns.adobe.com/flex/mx</uri>
+            <manifest>lib/flexsdk/frameworks/mx-manifest.xml</manifest>
+         </namespace>
+         <namespace>
+            <uri>http://www.adobe.com/2006/mxml</uri>
+            <manifest>lib/flexsdk/frameworks/mxml-manifest.xml</manifest>
+         </namespace>
+      </namespaces>
+
+      <!-- Enable trace statement omission. -->
+      <omit-trace-statements>true</omit-trace-statements>     
+
+      <fonts>
+
+          <!-- Enables advanced anti-aliasing for embedded fonts, which provides greater clarity for small -->
+          <!-- fonts. This setting can be overriden in CSS for specific fonts. -->
+          <!-- NOTE: flash-type has been deprecated. Please use advanced-anti-aliasing <flash-type>true</flash-type> -->
+          <advanced-anti-aliasing>true</advanced-anti-aliasing>
+
+          <!-- The number of embedded font faces that are cached. -->
+          <max-cached-fonts>20</max-cached-fonts>
+
+          <!-- The number of character glyph outlines to cache for each font face. -->
+          <max-glyphs-per-face>1000</max-glyphs-per-face>
+
+          <!-- Compiler font manager classes, in policy resolution order-->
+          <managers>
+              <manager-class>flash.fonts.JREFontManager</manager-class>
+              <manager-class>flash.fonts.BatikFontManager</manager-class>
+              <manager-class>flash.fonts.AFEFontManager</manager-class>
+              <manager-class>flash.fonts.CFFFontManager</manager-class>
+          </managers>
+
+          <local-fonts-snapshot>lib/flexsdk/frameworks/localFonts.ser</local-fonts-snapshot>
+      </fonts>
+	  
+      <!-- Nearly all of these settings pertain to code quality / correctness warnings.       
+	I tried deleting them to see if they're the compiler defaults, but it doesn't look like they are.
+
+	Annoyingly, the doc pages do not specify the defaults and dumping values with the default compiler 
+	settings just omits the arguments entirely.  
+	
+	As such I haven't been able to ascertain what the defaults are, so I've just left these settings
+	in the config file.  MJS
+       -->
+      <!-- Array.toString() format has changed. -->
+      <warn-array-tostring-changes>false</warn-array-tostring-changes>
+
+      <!-- Assignment within conditional. -->
+      <warn-assignment-within-conditional>true</warn-assignment-within-conditional>
+
+      <!-- Possibly invalid Array cast operation. -->
+      <warn-bad-array-cast>true</warn-bad-array-cast>
+
+      <!-- Non-Boolean value used where a Boolean value was expected. -->
+      <warn-bad-bool-assignment>true</warn-bad-bool-assignment>
+
+      <!-- Invalid Date cast operation. -->
+      <warn-bad-date-cast>true</warn-bad-date-cast>
+
+      <!-- Unknown method. -->
+      <warn-bad-es3-type-method>true</warn-bad-es3-type-method>
+
+      <!-- Unknown property. -->
+      <warn-bad-es3-type-prop>true</warn-bad-es3-type-prop>
+
+      <!-- Illogical comparison with NaN. Any comparison operation involving NaN will evaluate to false because NaN != NaN. -->
+      <warn-bad-nan-comparison>true</warn-bad-nan-comparison>
+
+      <!-- Impossible assignment to null. -->
+      <warn-bad-null-assignment>true</warn-bad-null-assignment>
+
+      <!-- Illogical comparison with null. -->
+      <warn-bad-null-comparison>true</warn-bad-null-comparison>
+
+      <!-- Illogical comparison with undefined. Only untyped variables (or variables of type *) can be undefined. -->
+      <warn-bad-undefined-comparison>true</warn-bad-undefined-comparison>
+
+      <!-- Boolean() with no arguments returns false in ActionScript 3.0. Boolean() returned undefined in ActionScript 2.0. -->
+      <warn-boolean-constructor-with-no-args>false</warn-boolean-constructor-with-no-args>
+
+      <!-- __resolve is no longer supported. -->
+      <warn-changes-in-resolve>false</warn-changes-in-resolve>
+
+      <!-- Class is sealed. It cannot have members added to it dynamically. -->
+      <warn-class-is-sealed>true</warn-class-is-sealed>
+
+      <!-- Constant not initialized. -->
+      <warn-const-not-initialized>true</warn-const-not-initialized>
+
+      <!-- Function used in new expression returns a value. Result will be what the -->
+      <!-- function returns, rather than a new instance of that function.           -->
+      <warn-constructor-returns-value>false</warn-constructor-returns-value>
+
+      <!-- EventHandler was not added as a listener. -->
+      <warn-deprecated-event-handler-error>false</warn-deprecated-event-handler-error>
+
+      <!-- Unsupported ActionScript 2.0 function. -->
+      <warn-deprecated-function-error>true</warn-deprecated-function-error>
+
+      <!-- Unsupported ActionScript 2.0 property. -->
+      <warn-deprecated-property-error>true</warn-deprecated-property-error>
+
+      <!-- More than one argument by the same name. -->
+      <warn-duplicate-argument-names>true</warn-duplicate-argument-names>
+
+      <!-- Duplicate variable definition -->
+      <warn-duplicate-variable-def>true</warn-duplicate-variable-def>
+
+      <!-- ActionScript 3.0 iterates over an object's properties within a "for x in target" statement in random order. -->
+      <warn-for-var-in-changes>false</warn-for-var-in-changes>
+
+      <!-- Importing a package by the same name as the current class will hide that class identifier in this scope. -->
+      <warn-import-hides-class>true</warn-import-hides-class>
+
+      <!-- Use of the instanceof operator. -->
+      <warn-instance-of-changes>true</warn-instance-of-changes>
+
+      <!-- Internal error in compiler. -->
+      <warn-internal-error>true</warn-internal-error>
+
+      <!-- _level is no longer supported. For more information, see the flash.display package. -->
+      <warn-level-not-supported>true</warn-level-not-supported>
+
+      <!-- Missing namespace declaration (e.g. variable is not defined to be public, private, etc.). -->
+      <warn-missing-namespace-decl>true</warn-missing-namespace-decl>
+
+      <!-- Negative value will become a large positive value when assigned to a uint data type. -->
+      <warn-negative-uint-literal>true</warn-negative-uint-literal>
+
+      <!-- Missing constructor. -->
+      <warn-no-constructor>false</warn-no-constructor>
+
+      <!-- The super() statement was not called within the constructor. -->
+      <warn-no-explicit-super-call-in-constructor>false</warn-no-explicit-super-call-in-constructor>
+
+      <!-- Missing type declaration. -->
+      <warn-no-type-decl>true</warn-no-type-decl>
+
+      <!-- In ActionScript 3.0, white space is ignored and '' returns 0. Number() returns -->
+      <!-- NaN in ActionScript 2.0 when the parameter is '' or contains white space.      -->
+      <warn-number-from-string-changes>false</warn-number-from-string-changes>
+
+      <!-- Change in scoping for the this keyword. Class methods extracted from an  -->
+      <!-- instance of a class will always resolve this back to that instance. In   -->
+      <!-- ActionScript 2.0 this is looked up dynamically based on where the method -->
+      <!-- is invoked from.                                                         -->
+      <warn-scoping-change-in-this>false</warn-scoping-change-in-this>
+
+      <!-- Inefficient use of += on a TextField.-->
+      <warn-slow-text-field-addition>true</warn-slow-text-field-addition>
+
+      <!-- Possible missing parentheses. -->
+      <warn-unlikely-function-value>true</warn-unlikely-function-value>
+
+      <!-- Possible usage of the ActionScript 2.0 XML class. -->
+      <warn-xml-class-has-changed>false</warn-xml-class-has-changed>
+
+      <!-- new settings -->
+      <mobile>false</mobile>   	  
+    </compiler>
+
+   <!-- runtime-shared-library-path: specifies a SWC or directory to link against and an RSL URL to load with optional failover URLs -->
+      <!-- Framework SWC -->
+	<runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/framework.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/framework_4.6.0.23201.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>framework_4.6.0.23201.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+   
+	<!-- TextLayout SWC -->
+      <runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/textLayout.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/tlf/2.0.0.232/textLayout_2.0.0.232.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>textLayout_2.0.0.232.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+    
+      <!-- Spark SWC-->
+   	<runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/spark.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/spark_4.6.0.23201.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>spark_4.6.0.23201.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+	
+      <!-- Sparkskins SWC-->
+   	<runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/sparkskins.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/sparkskins_4.6.0.23201.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>sparkskins_4.6.0.23201.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+	 
+	<!-- RPC SWC -->
+	<runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/rpc.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/rpc_4.6.0.23201.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>rpc_4.6.0.23201.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+    	
+      <!-- Charts SWC -->
+	<runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/charts.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/charts_4.6.0.23201.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>charts_4.6.0.23201.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+
+      <!-- Spark_dmv SWC -->
+	<runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/spark_dmv.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/spark_dmv_4.6.0.23201.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>spark_dmv_4.6.0.23201.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+
+      <!-- OSMF SWC -->
+     <runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/osmf.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/osmf_1.0.0.16316.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>osmf_1.0.0.16316.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+      
+      <!-- MX SWC -->
+	<runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/mx/mx.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/mx_4.6.0.23201.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>mx_4.6.0.23201.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+   
+      <!-- Advancedgrids SWC -->
+	<runtime-shared-library-path>
+		<path-element>lib/flexsdk/frameworks/libs/advancedgrids.swc</path-element>
+		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/advancedgrids_4.6.0.23201.swz</rsl-url>
+		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
+		<rsl-url>advancedgrids_4.6.0.23201.swz</rsl-url>
+		<policy-file-url></policy-file-url>
+	</runtime-shared-library-path>
+
+	<!-- static-link-runtime-shared-libraries: statically link the libraries specified by the -runtime-shared-libraries-path option.-->
+	<static-link-runtime-shared-libraries>false</static-link-runtime-shared-libraries>
+   
+   <!-- Metadata added to SWFs via the SWF Metadata tag. -->
+   <metadata>
+      <title>Adobe Flex 4 Application</title>
+      <description>http://www.adobe.com/products/flex</description>
+      <publisher>unknown</publisher>
+      <creator>unknown</creator>
+      <language>EN</language>
+   </metadata>
+   
+   <!-- Settings we're using that don't already appear in the default config
+		TODO: Figure out whether these are needed, or whether they can be removed or handled through gradle 
+	-->
+   <default-background-color>0xFFFFFF</default-background-color>      
+   <default-size>
+      <width>500</width>
+      <height>375</height>
+   </default-size>   
+</flex-config>

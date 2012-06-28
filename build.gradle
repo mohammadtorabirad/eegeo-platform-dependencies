@@ -1,0 +1,61 @@
+// root build file
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'org.gradlefx', name: 'gradlefx', version: '0.4'
+    }
+}
+
+allprojects {
+	flex_sdk_abs = rootDir.absolutePath + flex_sdk
+	flex_sdk_framework_libs_abs = flex_sdk_abs + flex_sdk_framework_libs
+	flex_sdk_player_abs = flex_sdk_framework_libs_abs + "player/11.3/"
+	flex_theme_abs = flex_sdk_abs + flex_sdk_framework_themes
+	local_repo_abs = rootDir.absolutePath + "/local-repo"
+    
+    flash_player_folder = flash_player_version.substring(0, flash_player_version.lastIndexOf('.'))
+    
+    include_halo_theme = '-theme=' + flex_theme_abs + 'halo/halo.swc'
+    
+    // contains the common compiler settings being used across all our apps 
+    // (maybe need to be refactored into seperate files if individual 
+    // customisations are required)
+    custom_flex_config = rootDir.absolutePath + '/swf-flex-config.xml'
+}
+
+subprojects {
+    apply plugin: 'gradlefx'
+	
+    repositories {
+		ivy {
+				url local_repo_abs
+			}
+		
+        mavenCentral()
+        mavenLocal()
+		mavenRepo name: 'codecraigrepo', url: "http://www.codecraig.com/maven-repo/"		
+    }
+	
+	additionalCompilerOptions = [
+        '-target-player=' + flash_player_version,
+        '-strict=true',
+        '-swf-version=' + swf_version ,
+		'-debug=' + debug_build,
+        '-incremental=' + incremental_build
+	]
+
+    flexHome = flex_sdk_abs
+
+	// TODO: sort out the convention for assets.
+	// They should be under the src directory (e.g. "/src/assets/" rather than "/assets/"
+    srcDirs = ['/src']
+	
+	dependencies {
+		external files(flex_sdk_framework_libs_abs + "framework.swc")	
+        external files(flex_sdk_player_abs + "playerglobal.swc")
+	}	
+}
+
+defaultTasks 'clean', 'compile'
