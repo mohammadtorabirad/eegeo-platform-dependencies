@@ -48,6 +48,8 @@ subprojects {
 
     flexHome = flex_sdk_abs
 
+	jvmArguments=['-Xmx1024m','-Xms512m']
+	
 	// TODO: sort out the convention for assets.
 	// They should be under the src directory (e.g. "/src/assets/" rather than "/assets/"
     srcDirs = ['/src']
