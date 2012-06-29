@@ -11,12 +11,12 @@
       
       <!-- List of SWC files or directories that contain SWC files. -->
       <library-path>
-         <path-element>lib\flexsdk\frameworks\libs\flash-integration.swc</path-element>
-         <path-element>lib\flexsdk\frameworks\libs\authoringsupport.swc</path-element>
+         <path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/flash-integration.swc</path-element>
+         <path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/authoringsupport.swc</path-element>
 		 
 		 <!-- ??   <path-element>locale/{locale}</path-element> -->
          <!-- The following entry is because LCDS copies playerfds.swc in the player folder -->
-         <path-element>lib\flexsdk\frameworks\locale\{locale}</path-element>
+         <path-element>eegeo-platform-dependencies/flexsdk/frameworks/locale/{locale}</path-element>
 
       </library-path>
       <namespaces>
@@ -24,19 +24,19 @@
       <!-- elements.                                                                -->
          <namespace>
             <uri>http://ns.adobe.com/mxml/2009</uri>
-            <manifest>lib/flexsdk/frameworks/mxml-2009-manifest.xml</manifest>
+            <manifest>eegeo-platform-dependencies/flexsdk/frameworks/mxml-2009-manifest.xml</manifest>
          </namespace>
          <namespace>
             <uri>library://ns.adobe.com/flex/spark</uri>
-            <manifest>lib/flexsdk/frameworks/spark-manifest.xml</manifest>
+            <manifest>eegeo-platform-dependencies/flexsdk/frameworks/spark-manifest.xml</manifest>
          </namespace>
          <namespace>
             <uri>library://ns.adobe.com/flex/mx</uri>
-            <manifest>lib/flexsdk/frameworks/mx-manifest.xml</manifest>
+            <manifest>eegeo-platform-dependencies/flexsdk/frameworks/mx-manifest.xml</manifest>
          </namespace>
          <namespace>
             <uri>http://www.adobe.com/2006/mxml</uri>
-            <manifest>lib/flexsdk/frameworks/mxml-manifest.xml</manifest>
+            <manifest>eegeo-platform-dependencies/flexsdk/frameworks/mxml-manifest.xml</manifest>
          </namespace>
       </namespaces>
 
@@ -64,7 +64,7 @@
               <manager-class>flash.fonts.CFFFontManager</manager-class>
           </managers>
 
-          <local-fonts-snapshot>lib/flexsdk/frameworks/localFonts.ser</local-fonts-snapshot>
+          <local-fonts-snapshot>eegeo-platform-dependencies/flexsdk/frameworks/localFonts.ser</local-fonts-snapshot>
       </fonts>
 	  
       <!-- Nearly all of these settings pertain to code quality / correctness warnings.       
@@ -196,7 +196,7 @@
    <!-- runtime-shared-library-path: specifies a SWC or directory to link against and an RSL URL to load with optional failover URLs -->
       <!-- Framework SWC -->
 	<runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/framework.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/framework.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/framework_4.6.0.23201.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>framework_4.6.0.23201.swz</rsl-url>
@@ -205,7 +205,7 @@
    
 	<!-- TextLayout SWC -->
       <runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/textLayout.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/textLayout.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/tlf/2.0.0.232/textLayout_2.0.0.232.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>textLayout_2.0.0.232.swz</rsl-url>
@@ -214,7 +214,7 @@
     
       <!-- Spark SWC-->
    	<runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/spark.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/spark.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/spark_4.6.0.23201.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>spark_4.6.0.23201.swz</rsl-url>
@@ -223,7 +223,7 @@
 	
       <!-- Sparkskins SWC-->
    	<runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/sparkskins.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/sparkskins.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/sparkskins_4.6.0.23201.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>sparkskins_4.6.0.23201.swz</rsl-url>
@@ -232,7 +232,7 @@
 	 
 	<!-- RPC SWC -->
 	<runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/rpc.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/rpc.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/rpc_4.6.0.23201.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>rpc_4.6.0.23201.swz</rsl-url>
@@ -241,7 +241,7 @@
     	
       <!-- Charts SWC -->
 	<runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/charts.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/charts.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/charts_4.6.0.23201.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>charts_4.6.0.23201.swz</rsl-url>
@@ -250,7 +250,7 @@
 
       <!-- Spark_dmv SWC -->
 	<runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/spark_dmv.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/spark_dmv.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/spark_dmv_4.6.0.23201.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>spark_dmv_4.6.0.23201.swz</rsl-url>
@@ -259,7 +259,7 @@
 
       <!-- OSMF SWC -->
      <runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/osmf.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/osmf.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/osmf_1.0.0.16316.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>osmf_1.0.0.16316.swz</rsl-url>
@@ -268,7 +268,7 @@
       
       <!-- MX SWC -->
 	<runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/mx/mx.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/mx/mx.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/mx_4.6.0.23201.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>mx_4.6.0.23201.swz</rsl-url>
@@ -277,7 +277,7 @@
    
       <!-- Advancedgrids SWC -->
 	<runtime-shared-library-path>
-		<path-element>lib/flexsdk/frameworks/libs/advancedgrids.swc</path-element>
+		<path-element>eegeo-platform-dependencies/flexsdk/frameworks/libs/advancedgrids.swc</path-element>
 		<rsl-url>http://fpdownload.adobe.com/pub/swz/flex/4.6.0.23201/advancedgrids_4.6.0.23201.swz</rsl-url>
 		<policy-file-url>http://fpdownload.adobe.com/pub/swz/crossdomain.xml</policy-file-url>
 		<rsl-url>advancedgrids_4.6.0.23201.swz</rsl-url>
