@@ -11,7 +11,7 @@ buildscript {
 allprojects {
 	flex_sdk_abs = rootDir.absolutePath + flex_sdk
 	flex_sdk_framework_libs_abs = flex_sdk_abs + flex_sdk_framework_libs
-	flex_sdk_player_abs = flex_sdk_framework_libs_abs + "player/11.3/"
+	flex_sdk_player_abs = flex_sdk_framework_libs_abs + "player/11.5/"
 	flex_theme_abs = flex_sdk_abs + flex_sdk_framework_themes
 	local_repo_abs = rootDir.absolutePath + "/local-repo"
     
